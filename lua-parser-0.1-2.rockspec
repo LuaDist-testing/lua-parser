@@ -1,10 +1,17 @@
---*-lua-*--
+-- This file was automatically generated for the LuaDist project.
+
 package = "lua-parser"
-version = "0.1-1"
+version = "0.1-2"
+-- LuaDist source
 source = {
-   url = "git://github.com/andremm/lua-parser",
-   tag = "v0.1",
+  tag = "0.1-2",
+  url = "git://github.com/LuaDist-testing/lua-parser.git"
 }
+-- Original source
+-- source = {
+--    url = "git://github.com/andremm/lua-parser",
+--    tag = "v0.1"
+-- }
 description = {
    summary = "A Lua 5.2 parser written with LPeg",
    detailed = [[
@@ -17,14 +24,12 @@ description = {
    license = "MIT"
 }
 dependencies = {
-   "lua >= 5.1",
-   "lpeg >= 0.12",
+   "lua >= 5.1", "lpeg >= 0.12"
 }
 build = {
-    type="builtin",
-    modules={
-        ["lua-parser.parser"] = "lua-parser/parser.lua",
-        ["lua-parser.pp"] = "lua-parser/pp.lua",
-    }
+   type = "builtin",
+   modules = {
+      ['lua-parser.parser'] = "lua-parser/parser.lua",
+      ['lua-parser.pp'] = "lua-parser/pp.lua"
+   }
 }
-
