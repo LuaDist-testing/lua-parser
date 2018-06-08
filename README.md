@@ -1,7 +1,7 @@
 lua-parser
 ==========
 
-This is a Lua 5.2 parser written with LPeg that generates an AST in
+This is a Lua 5.3 parser written with LPeg that generates an AST in
 the format specified by [Metalua](https://github.com/fab13n/metalua-parser).
 The parser also implements an error reporting technique that is
 based on tracking the farthest failure position.
@@ -18,15 +18,7 @@ API
 The package `lua-parser` has two modules: `lua-parser.parser`
 and `lua-parser.pp`.
 
-The module `lua-parser.parser` implements the parser and provides
-two functions for generating the AST:
-
-* `parser.parse_from_file (filename)`
-
-    Opens the given filename, which should be a string, reads its contents,
-    and tries to parse it.
-    It returns the AST in case of success, and **nil** plus an error message
-    otherwise.
+The module `lua-parser.parser` implements the function `parser.parse`:
 
 * `parser.parse (subject, filename)`
 
@@ -50,7 +42,7 @@ a dump function:
 * `pp.dump (ast[, i])`
 
     It dumps the AST to the screen.
-    The parameter **i** sets the identation level.
+    The parameter **i** sets the indentation level.
 
 Usage
 --------
@@ -85,5 +77,5 @@ Usage
     $ lua parse.lua "for i=1, 10 do print(i) "
     exemplo1.lua:1:24: syntax error, unexpected 'EOF', expecting 'end',
     'return', 'Name', 'goto', 'break', '::', 'local', 'function', 'repeat',
-    'for', 'do', 'while', 'if', ';', '=', ',', 'String', '{', '(', ':', '[',  '.'
+    'for', 'do', 'while', 'if', ';', '=', ',', 'String', '{', '(', ':', '[', '.'
 
