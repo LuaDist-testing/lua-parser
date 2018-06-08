@@ -1,18 +1,10 @@
--- This file was automatically generated for the LuaDist project.
-
 --*-lua-*--
 package = "lua-parser"
 version = "0.1.1-1"
--- LuaDist source
 source = {
-  tag = "0.1.1-1",
-  url = "git://github.com/LuaDist-testing/lua-parser.git"
+  url = "git://github.com/andremm/lua-parser",
+  tag = "v0.1.1",
 }
--- Original source
--- source = {
---   url = "git://github.com/andremm/lua-parser",
---   tag = "v0.1.1",
--- }
 description = {
   summary = "A Lua 5.3 parser written with LPeg",
   detailed = [[
@@ -36,3 +28,4 @@ build = {
     ["lua-parser.scope"] = "lua-parser/scope.lua",
   }
 }
+
